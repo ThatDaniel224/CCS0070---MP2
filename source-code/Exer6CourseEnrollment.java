@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @author dastarosa
  */
 
-// Requirement 1: Student class with private ID and full name
 class Student {
     private String id;
     private String fullName;
@@ -28,7 +27,6 @@ class Student {
     }
 }
 
-// Requirement 2: Course class with private fields and array tracking
 class Course {
     private String code;
     private String title;
@@ -36,7 +34,6 @@ class Course {
     private Student[] enrolledStudents;
     private int enrolledCount;
 
-    // Requirement 3: Initialize internal array using capacity received by the constructor
     public Course(String code, String title, int capacity) {
         this.code = code;
         this.title = title;
@@ -45,7 +42,6 @@ class Course {
         this.enrolledCount = 0;
     }
 
-    // Requirement 4: enroll method rejecting null, duplicates, and full courses
     public boolean enroll(Student student) {
         if (student == null) {
             System.out.println("Enrollment failed: Student cannot be null.");
@@ -68,7 +64,6 @@ class Course {
         return true;
     }
 
-    // Requirement 5: findStudent and displayRoster
     public Student findStudent(String id) {
         for (int i = 0; i < enrolledCount; i++) {
             if (enrolledStudents[i].getId().equalsIgnoreCase(id)) {
@@ -149,7 +144,7 @@ public class Exer6CourseEnrollment {
 
         System.out.print("\nEnter the number of enrollment attempts: ");
         int attempts = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         for (int a = 1; a <= attempts; a++) {
             System.out.println("\n--- Attempt " + a + " of " + attempts + " ---");
