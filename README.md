@@ -23,7 +23,8 @@
 1. Why does Garage need to own an array of ParkingSlot objects?
 - To reference it for checking duplicate plate numbers.
 2. What condition checks slot compatibility for a car?
-```if (slot.getSlotType() == 'C') {
+```
+if (slot.getSlotType() == 'C') {
     isCompatible = true;
 }
 ```
